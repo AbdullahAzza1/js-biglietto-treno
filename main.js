@@ -1,10 +1,17 @@
-const numChilometri = prompt("quanti km vuoi percorrere?");
+const numChilometri = parseInt(prompt("quanti km vuoi percorrere?"));
+const eta = parseInt(prompt("eta del passeggero"));
+const tariffa = 0.21;
+const percorrenza = numChilometri * tariffa;
+document.getElementById("biglietto").innerHTML = 'il biglietto e ' + percorrenza + 'euro';
+console.log(percorrenza);
 
-const chilometri = numChilometri();
-const tariffa = tariffa(0.21);
+if ("eta <= 18"){
+    document.getElementById("minorenni").innerHTML = ((percorrenza / 100) * 80) + 'euro';
+} 
+    
 
-document.getElementById("biglietto").innerHTML = 'chilometri * tariffe';
 
 
 
-const biglietto = prompt("eta del passeggero");
+
+
