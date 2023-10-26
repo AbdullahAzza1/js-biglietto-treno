@@ -5,9 +5,11 @@ const percorrenza = numChilometri * tariffa;
 document.getElementById("biglietto").innerHTML = 'il biglietto e ' + percorrenza + 'euro';
 console.log(percorrenza);
 
-if ("eta <= 18"){
-    document.getElementById("minorenni").innerHTML = ((percorrenza / 100) * 80) + 'euro';
-} 
+if ("sotto i 18"){
+    document.getElementById("minorenni").innerHTML = percorrenza / 100 * 80 + 'euro';
+} else if ("sopra i 65"){
+    document.getElementById("over65").innerHTML = percorrenza / 100 * 60 + 'euro';
+}
     
 
 
